@@ -5,27 +5,50 @@
 <head>
 <marquee direction="right" scrollamount="12" behavior="alternate">MEETING
 	ROOM BOOKING SYSTEM</marquee>
+	<script type="text/javascript">
+	function display() {
+		var username = document.forms["form"]["username"].value;
+
+		var idproof = document.forms["form"]["password"].value;
+
+		document.getElementById('enter').innerHTML = "";
+
+		document.getElementById('enter1').innerHTML = "";
+
+		if (username == null || username == "") {
+
+			document.getElementById('enter').innerHTML += "<p>Enter UserName</p>";
+
+			return false;
+		} else if (idproof == null || idproof == "") {
+
+			document.getElementById('enter1').innerHTML += "<p>Enter Password</p>";
+
+			return false;
+		}
+		return true;
+	}
+</script>
+	
 <meta charset="UTF-8">
 <title>Login Page</title>
 </head>
 <body>
-	<form name="index" style="text-align: center" method="post"
-		action="LoginServlet">
+	<form name="form" style="text-align: center" method="post"
+		action="LoginServlet" onsubmit="return display();">
 		<h2 align="center">Login</h2>
-		<table align="center">
-			<tr>
-				<td>User name:-</td>
-				<td><input type="text" name="username" value=""></td>
-			</tr>
-			<tr>
-				<td>Password:-</td>
-				<td><input type="password" name="password" value=""></td>
-			</tr>
-			<tr>
-				<td><input type="reset" name="index_clear" value="Clear"></td>
-				<td><input type="submit" name="index_validate" value="submit"></td>
-			</tr>
-		</table>
+			<p>
+			Username: <input type="text" name="username" />
+		</p>
+		<p id='enter'></p>
+		<p>
+			Password: <input type="password" name="password" />
+		</p>
+		<p id='enter1'></p>
+				<input type="reset" name="index_clear" value="Clear">
+				<input type="submit" name="index_validate" value="submit">
+			
+		
 	</form>
 </body>
 </html>
