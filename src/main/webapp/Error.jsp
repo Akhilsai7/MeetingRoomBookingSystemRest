@@ -7,6 +7,8 @@
 <title>Error Page</title>
 </head>
 <body>
+<br>
+<br>
 <h1 align="center">ERROR</h1>
 </body>
 </html>

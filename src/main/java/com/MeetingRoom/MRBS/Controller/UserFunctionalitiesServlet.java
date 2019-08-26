@@ -54,8 +54,10 @@ public class UserFunctionalitiesServlet extends HttpServlet {
 		LocalDateTime now = LocalDateTime.now();
 		DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("HH:mm:ss");
 		LocalDateTime nowtime = LocalDateTime.now();
-
 		HttpSession session = request.getSession();
+		
+		
+		//This method is used to Request a meeting room
 		String option = request.getParameter("varname");
 		if (option.equals("request")) {
 			ArrayList<String> meeting = new UserResource().getmeetingroom();
@@ -88,6 +90,9 @@ public class UserFunctionalitiesServlet extends HttpServlet {
 			response.sendRedirect(status);
 
 		}
+		
+		
+		//This method is used to cancel a Meeting room
 		if (option.equals("cancel")) {
 			response.sendRedirect("CancelMeetingRoom.jsp");
 		} else if (option.equals("cancelmeetingroom")) {
