@@ -57,7 +57,7 @@ public class UserFunctionalitiesServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		
-		//This method is used to Request a meeting room
+		//This method is used to Request a meeting room and it passes to UserFunctionalitiesRest
 		String option = request.getParameter("varname");
 		if (option.equals("request")) {
 			ArrayList<String> meeting = new UserResource().getmeetingroom();
@@ -92,7 +92,7 @@ public class UserFunctionalitiesServlet extends HttpServlet {
 		}
 		
 		
-		//This method is used to cancel a Meeting room
+		//This method is used to cancel a Meeting room and it passes to UserFunctionalitiesRest
 		if (option.equals("cancel")) {
 			response.sendRedirect("CancelMeetingRoom.jsp");
 		} else if (option.equals("cancelmeetingroom")) {

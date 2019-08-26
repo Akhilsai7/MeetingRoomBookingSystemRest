@@ -14,6 +14,8 @@ import com.MeetingRoom.MRBS.bean.ResourceUsage;
 
 public class FMResource {
 
+	
+	
 	public static String adduser(LoginBean login) {
 
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("MRBS");
@@ -26,7 +28,7 @@ public class FMResource {
 		manager.close();
 		return "ADDED";
 	}
-
+	
 	public String deleteuser(LoginBean loginbean) {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("MRBS");
 		EntityManager manager = emf.createEntityManager();

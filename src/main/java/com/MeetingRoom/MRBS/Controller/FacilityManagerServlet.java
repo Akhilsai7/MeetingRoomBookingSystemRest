@@ -49,7 +49,7 @@ public class FacilityManagerServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		
-		//method to add a user
+		//This method is used to add a user and this gets passed to FacilityManagerRest
 		String option = request.getParameter("varname");
 		if (option.equals("add"))
 			response.sendRedirect("AddUser.jsp");
@@ -71,7 +71,7 @@ public class FacilityManagerServlet extends HttpServlet {
 			response.sendRedirect(status);
 		}
 		
-		//This method is used to Delete a User
+		//This method is used to Delete a User and this gets passed to FacilityManagerRest
 		if (option.equals("delete"))
 			response.sendRedirect("DeleteUser.jsp");
 		else if (option.equals("deletedetails")) {
@@ -89,7 +89,7 @@ public class FacilityManagerServlet extends HttpServlet {
 		}
 		
 		
-		//This method is used to accept a Request
+		//This method is used to accept a Request and this gets passed to FacilityManagerRest
 		if (option.equals("accept")) {
 			MeetingRequestBean meetingrequest = new MeetingRequestBean();
 			Client client = ClientBuilder.newClient(new ClientConfig());
@@ -122,7 +122,7 @@ public class FacilityManagerServlet extends HttpServlet {
 			response.sendRedirect(status);
 		}
 		
-		//This method is used to Reject a Request
+		//This method is used to Reject a Request and this gets passed to FacilityManagerRest
 		if (option.equals("reject")) {
 			MeetingRequestBean meetingrequest = new MeetingRequestBean();
 			Client client = ClientBuilder.newClient(new ClientConfig());
@@ -153,7 +153,7 @@ public class FacilityManagerServlet extends HttpServlet {
 			response.sendRedirect(status);
 		}
 		
-		//This method is used to find Number of requests in a day
+		//This method is used to find Number of requests in a day and this gets passed to FacilityManagerRest
 		if (option.equals("noofrequests"))
 			response.sendRedirect("DayRequests.jsp");
 		else if (option.equals("DayRequestsMade")) {
@@ -174,7 +174,7 @@ public class FacilityManagerServlet extends HttpServlet {
 			out.print("No of requests in a day are:"+status);
 		}
 		
-		//This method is used to find Number of requests in a Month
+		//This method is used to find Number of requests in a Month and this gets passed to FacilityManagerRest
 		if (option.equals("monthrequests")) {
 			MeetingRequestBean meetingrequest = new MeetingRequestBean();
 			Client client = ClientBuilder.newClient(new ClientConfig());
@@ -194,7 +194,7 @@ public class FacilityManagerServlet extends HttpServlet {
 
 		}
 
-		//This method is used to find Number of times a resource is used
+		//This method is used to find Number of times a resource is used and this gets passed to FacilityManagerRest
 		if (option.equals("mostusedresource"))
 		{
 			ArrayList<String> resource = new UserResource().getResource();
@@ -218,7 +218,7 @@ public class FacilityManagerServlet extends HttpServlet {
 			
 		}
 		
-		//This method is used to add a Meeting Room
+		//This method is used to add a Meeting Room and this gets passed to FacilityManagerRest
 		if (option.equals("addmeetingroom"))
 			response.sendRedirect("AddMeetingRoom.jsp");
 		else if (option.equals("AddMeeting")) {
@@ -235,7 +235,7 @@ public class FacilityManagerServlet extends HttpServlet {
 			response.sendRedirect(status);
 		}
 		
-		//This method is used to add a resource
+		//This method is used to add a resource and this gets passed to FacilityManagerRest
 		if (option.equals("addresource"))
 			response.sendRedirect("AddResource.jsp");
 		else if (option.equals("AddResource")) {
