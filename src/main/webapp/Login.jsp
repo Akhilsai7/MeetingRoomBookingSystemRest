@@ -14,11 +14,11 @@
 		<h2 align="center">Login</h2>
 		<table align="center">
 			<tr>
-				<td>User name:</td>
+				<td>User name:-</td>
 				<td><input type="text" name="username" value=""></td>
 			</tr>
 			<tr>
-				<td>Password:</td>
+				<td>Password:-</td>
 				<td><input type="password" name="password" value=""></td>
 			</tr>
 			<tr>
